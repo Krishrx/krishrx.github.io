@@ -1,0 +1,31 @@
+.rotate-image {
+    width: 40px; 
+    height: 40px; 
+    position: relative;
+    transform-style: preserve-3d;
+    
+  }
+
+  .rotate-image:hover{
+    animation: rotate 2s 1 ease-in-out; 
+  }
+  
+  .rotate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: visible;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  

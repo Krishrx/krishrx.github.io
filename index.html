@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krishna🕸️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
           theme: {
             extend: {
+                fontFamily:{
+                    poppins:['Poppins', 'sans-serif']
+                },
               colors: {
                 clifford: '#da373d',
+              },
+              screens:{
+                sm:'480px'
               }
             }
           }
@@ -22,8 +32,31 @@
         
       </style>
 </head>
-<body>
-    <h1 class="">Hii  this is kali</h1>
+<body class="font-poppins ">
+    <header class="flex md:items-center  justify-between h-1/2 lg:h-full ">
+
+        <div class="myIcon flex items-center w-32 m-3">
+            <div class="rotate-image w-10 h-10">
+                <img src="./images/portfolio_icon.jpg" class="w-10 h-10 rounded-full" alt="Logoicon">
+            </div>
+            <h1 class="text-2xl font-bold pb-1 ">Krish.</h1>
+        </div>
+
+        <nav>
+            
+            <ul id="nav-bar" class="hidden absolute top-14 left-0 space-y-4 py-4 md:static  md:flex md:space-y-0 md:space-x-10 md:w-96 text-sm font-bold uppercase text-gray-600  w-screen text-center">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <i id="menu-btn" class="fa-solid fa-bars mt-2 text-2xl mx-3 md:hidden"></i>
+        </nav>
+
+        
+
+
+    </header>
 
 
     <script src="./app.js"></script>
