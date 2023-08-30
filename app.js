@@ -33,14 +33,16 @@ openModalButton.addEventListener('click', () => {
     }
   })
 
-  document.addEventListener('click', function(event) {
-    if (!event.target.closest('#nav-bar') && !event.target.closest('#menu-btn')) {
-        navBar.classList.add('hidden');
-        menuBtn.classList.toggle('fa-xmark');
-    }
-});
+//   document.addEventListener('click', function(event) {
+//     if (!event.target.closest('#nav-bar') && !event.target.closest('#menu-btn')) {
+//         navBar.classList.add('hidden');
+//         menuBtn.classList.toggle('fa-xmark');
+//     }
+// });
 
 const navLinks = navBar.querySelectorAll('a');
+
+if(window.innerWidth<=768){
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault(); 
@@ -53,3 +55,4 @@ const navLinks = navBar.querySelectorAll('a');
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
+}
