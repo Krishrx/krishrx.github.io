@@ -14,6 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("MzWvQQBeSdeIeUMCg");
+      })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -268,26 +276,26 @@
             <h2 class="text-xl text-center font-semibold mb-4">Contact Me</h2>
 
             <!-- Contact form -->
-            <form>
+            <form id="contactForm">
 
               <div class="mb-4">
                 <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-                <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded">
+                <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded" required>
               </div>
               
               <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded">
+                <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded" required>
               </div>
 
               <div class="mb-4">
               <label for="message" class="block mb-2 font-bold text-gray-700">Your message</label>
-              <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" placeholder="Leave a message..."></textarea>
+              <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" placeholder="Leave a message..." required></textarea>
               </div>
 
       
               <div class="flex justify-center">
-                <button type="submit" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <button id="contact-submit" type="submit" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                   <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     Send
                 </span>
@@ -309,10 +317,33 @@
       <i onclick='window.location.href = "https://twitter.com/krishrx3"' class="fa-brands fa-x-twitter fa-2x"></i>
 
       <div class="end-text">
-          <p class="pb-5 font-medium">Made by Krish❤️</p>
+          <p class="pb-5 font-medium">Made by Krish💜</p>
       </div>
     </footer>
 
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+  
+        var formData = {
+          to_name: "Kali Krishna",
+          from_name: document.getElementById('name').value,
+          message: document.getElementById('message').value,
+          reply_to: document.getElementById('email').value
+        };
+
+        emailjs.send('service_yvt2yum', 'template_vkgy9qy', formData)
+          .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Response Sent Successfully!');
+            document.getElementById('contactForm').reset(); 
+          }, function(error) {
+            console.log('FAILED...', error);
+            alert("Oops!! Something Went Wrong.Please try again later.");
+          });
+      });
+    </script>
 
     <script src="./app.js"></script>
     <script src="./autotyping.js"></script>
