@@ -34,9 +34,9 @@
 </head>
 <body class="font-poppins ">
 
-    <header class="flex md:items-center  justify-between h-1/2 lg:h-full ">
+    <header class="flex md:items-center  justify-between h-1/2 lg:h-full bg-white">
         <!-- logo & title -->
-        <div class="myIcon flex items-center w-32 m-3">
+        <div class="myIcon flex items-center w-32 m-3 md:ml-24">
             <div class="rotate-image w-10 h-10">
                 <img src="./images/portfolio_icon.jpg" class="w-10 h-10 rounded-full" alt="Logoicon">
             </div>
@@ -44,7 +44,7 @@
         </div>
         <!-- NavBar -->
         <nav>
-            <ul id="nav-bar" class="hidden absolute top-0 left-0 space-y-4 py-4 pt-12 md:static  md:flex md:space-y-0 md:space-x-10 md:w-96 md:py-0 md:pt-0 md:rounded-none text-sm font-bold uppercase text-gray-600  w-screen text-center rounded-b-xl">
+            <ul id="nav-bar" class="hidden absolute top-0 left-0 space-y-8 py-6 pt-12 md:static  md:flex md:space-y-0 md:space-x-10 md:w-96 md:py-0 md:pt-0 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-50 md:bg-transparent">
                 <li><a class="relative" href="#">About</a></li>
                 <li><a class="relative" href="#">Skills</a></li>
                 <li><a class="relative" href="#">Projects</a></li>
@@ -56,6 +56,27 @@
     </header>
 
 
+    <main class="">
+
+      <section class="bg-gradient-to-t from-purple-300 text-black h-full w-full flex flex-col justify-center items-center gap-12 md:flex-row md:justify-around md:gap-0 md:py-24">
+
+        <div class="text-4xl font-bold text-center p-5 basis-1/2 mt-24 md:mt-0 md:text-left md:pl-24">
+          <h1>Hi 👋,</h1>
+          <h1>I'm <span class="text-purple-800">Kali Krishna,</span></h1>
+          <h1>A <span class="text-purple-800" id="changing-text"></span></h1>
+        </div>
+
+        <div class="basis-1/2 mb-24 md:mb-0 ">
+          <img src="./images/avatar_portfolio.jpg" alt="" class="w-52 h-52 md:mx-auto rounded-full">
+        </div>
+
+      </section>
+
+
+    </main>
+
+
     <script src="./app.js"></script>
+    <script src="./autotyping.js"></script>
 </body>
 </html>

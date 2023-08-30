@@ -6,9 +6,13 @@
     
   }
 
-  .rotate-image:hover{
+  .myIcon:hover .rotate-image{
     animation: rotate 2s 1 ease-in-out; 
   }
+
+ /* .rotate-image{
+    animation: rotate 4s infinite linear; 
+  } */
   
   .rotate-image img {
     width: 100%;
