@@ -9,3 +9,12 @@ var AutoTyping=function(e){var t={};function r(n){if(t[n])return t[n].exports;va
       waitBetweenWords: 500,
   });
   exampleTyping.start()
+
+  const anotherText = ['Languages', 'Frameworks & Libs', 'Tools'];
+  const anotherTyping = new AutoTyping('#changing-text-2', anotherText, {
+      typeSpeed: 100,
+      deleteSpeed: 100,
+      waitBeforeDelete: 2000,
+      waitBetweenWords: 500,
+  });
+  anotherTyping.start()
