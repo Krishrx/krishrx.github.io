@@ -44,19 +44,20 @@
         
       </style>
 </head>
-<body class="font-poppins ">
+<body class="font-poppins bg-purple-50">
 
-    <header class="flex md:items-center  justify-between h-1/2 lg:h-full bg-white">
+    <header class="flex md:items-center  justify-between w-full bg-purple-50">
         <!-- logo & title -->
-        <div class="myIcon flex items-center w-32 m-3 md:ml-24">
+        <div class="myIcon flex items-center md:pl-20  m-3">
             <div class="rotate-image w-10 h-10">
                 <img src="./images/portfolio_icon.jpg" class="w-10 h-10 rounded-full" alt="Logoicon">
             </div>
-            <h1 class="text-2xl font-bold pb-1 ">Krish.</h1>
+            <h1 class="text-2xl font-bold ml-2">Krish.</h1>
         </div>
         <!-- NavBar -->
         <nav>
-            <ul id="nav-bar" class="hidden absolute top-0 left-0 space-y-8 py-6 pt-12 md:static  md:flex md:space-y-0 md:space-x-10 md:w-96 md:py-0 md:pt-0 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-50 md:bg-transparent">
+            <ul id="nav-bar" class=" hidden absolute top-0 left-0 space-y-8 py-6 pt-12 md:static  md:flex md:space-y-0 md:space-x-8  md:py-0 md:pt-0 md:mr-4 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-50 md:bg-transparent">
+                <li><a class="relative" href="#home">Home</a></li>  
                 <li><a class="relative" href="#about">About me</a></li>
                 <li><a class="relative" href="#skills">Skills</a></li>
                 <li><a class="relative" href="#projects">Projects</a></li>
@@ -71,7 +72,7 @@
     <main class="">
 
       <!-- home -->
-      <section class="bg-gradient-to-t from-purple-200 text-black h-full w-full flex flex-col justify-center items-center gap-12 md:flex-row md:justify-around md:gap-0 md:py-24">
+      <section id="home" class="bg-gradient-to-t from-purple-200 text-black h-full w-full flex flex-col justify-center items-center gap-20 md:flex-row md:justify-around md:gap-0 md:py-24">
 
         <div class="text-3xl font-bold text-center p-5 basis-1/2 mt-24 md:mt-0 md:text-left md:pl-24 md:text-4xl">
           <h1>Hi 👋,</h1>
@@ -80,7 +81,7 @@
         </div>
 
         <div class="basis-1/2 mb-24 md:mb-0 ">
-          <img src="./images/avatar_portfolio.jpg" alt="" class="w-52 h-52 md:mx-auto rounded-full">
+          <img src="./images/avatar_portfolio_black.jpg" alt="" class="w-52 h-52 md:mx-auto rounded-full">
         </div>
 
       </section>
@@ -91,7 +92,7 @@
           <h1 class="text-2xl font-bold py-4 uppercase">About Me</h1>
         </div>
         <div class="w-11/12 text-center text-gray-600 p-4 px-8 md:w-1/2 md:px-0 md:text-lg shadow-2xl shadow-purple-100 bg-purple-50 rounded-3xl">
-          <p class="p-4">I'm an electronics and communication engineering grad who's taken a detour into the world of web development. What began as a curiosity about web development has evolved into a fervent journey of learning and growth.While my foundation rests in circuits and signals, I find my affinity in sync with coding and crafting web experiences. I'm all about diving into new things, unraveling challenges, and deciphering the components that drive technology forward. Every line of code I write is a step towards expanding my horizons and discovering the boundless possibilities that technology offers.</p>
+          <p class="p-2 md:p-4">I'm an electronics and communication engineering grad who's taken a detour into the world of web development. What began as a curiosity about web development has evolved into a fervent journey of learning and growth.While my foundation rests in circuits and signals, I find my affinity in sync with coding and crafting web experiences. I'm all about diving into new things, unraveling challenges, and deciphering the components that drive technology forward. Every line of code I write is a step towards expanding my horizons and discovering the boundless possibilities that technology offers.</p>
         </div>
       </section>
 
@@ -221,7 +222,7 @@
             <div class="projContent absolute top-0 left-0 hidden text-center text-white px-2 py-2 pt-8 bg-purple-200 w-full h-full rounded-xl">
               <p class="text-gray-600">Word Magic is a web-based tool that provides various text manipulation.</p>
               <div class="p-2 mt-6 flex justify-center">
-                <button onclick='window.location.href = "https://wordmagic.onrender.com/index.html"' class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                <button onclick='window.location.href = "https://wordmagic.onrender.com/index.html"' class="shadow-lg relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
                   <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     View Website
                   </span>
@@ -240,7 +241,7 @@
             <div class="projContent absolute top-0 left-0 hidden text-center text-white px-2 py-2 pt-8 bg-purple-200 w-full h-full rounded-xl">
               <p class="text-gray-600">A To Do web application to keep track of tasks.</p>
               <div class="p-2 mt-6 flex justify-center">
-              <button onclick='window.location.href = "https://to-do-app-6bh8.onrender.com/"' class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+              <button onclick='window.location.href = "https://to-do-app-6bh8.onrender.com/"' class="shadow-lg relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                   View Website
                 </span>
@@ -257,7 +258,7 @@
 
         <!-- contact button -->
         <div class="text-center py-4">
-          <button id="openModalButton"  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+          <button id="openModalButton"  class="shadow-lg shadow-purple-300/50 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Say Hello!
             </span>
@@ -295,7 +296,7 @@
 
       
               <div class="flex justify-center">
-                <button id="contact-submit" type="submit" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <button id="contact-submit" type="submit" class="shadow-lg shadow-purple-300/50 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                   <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     Send
                 </span>

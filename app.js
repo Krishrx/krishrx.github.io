@@ -33,12 +33,7 @@ openModalButton.addEventListener('click', () => {
     }
   })
 
-//   document.addEventListener('click', function(event) {
-//     if (!event.target.closest('#nav-bar') && !event.target.closest('#menu-btn')) {
-//         navBar.classList.add('hidden');
-//         menuBtn.classList.toggle('fa-xmark');
-//     }
-// });
+
 
 
     const navLinks = navBar.querySelectorAll('a');
@@ -61,4 +56,3 @@ openModalButton.addEventListener('click', () => {
     window.addEventListener('resize', ()=>{
         screenWidth = window.innerWidth;
     });
-
