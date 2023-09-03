@@ -6,17 +6,6 @@ menuBtn.addEventListener('click',()=>{
     menuBtn.classList.toggle('fa-xmark');
 })
 
-const projDivs = document.querySelectorAll('.projDivs');
-
-projDivs.forEach(projDiv=>{
-    projDiv.addEventListener('mouseenter',()=>{
-        projDiv.lastElementChild.classList.toggle('hidden');
-    })
-    projDiv.addEventListener('mouseleave',()=>{
-        projDiv.lastElementChild.classList.toggle('hidden');
-    })
-})
-
 openModalButton.addEventListener('click', () => {
     modal.classList.remove('hidden');
   });
