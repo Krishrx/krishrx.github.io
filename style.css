@@ -7,7 +7,7 @@
   }
 
   .myIcon:hover .rotate-image{
-    animation: rotate 2s 1 ease-in-out; 
+    animation: rotate 2s infinite linear; 
   }
 
  /* .rotate-image{
@@ -59,6 +59,7 @@ a:hover:before {
   cursor: pointer;
   border-radius: 50%;
   color: #000000;
+  transition: all 0.5s ease;
 }
 .footer .fa-instagram:hover{
   color: white;
