@@ -6,17 +6,6 @@ menuBtn.addEventListener('click',()=>{
     menuBtn.classList.toggle('fa-xmark');
 })
 
-const projDivs = document.querySelectorAll('.projDivs');
-
-projDivs.forEach(projDiv=>{
-    projDiv.addEventListener('mouseenter',()=>{
-        projDiv.lastElementChild.classList.toggle('hidden');
-    })
-    projDiv.addEventListener('mouseleave',()=>{
-        projDiv.lastElementChild.classList.toggle('hidden');
-    })
-})
-
 openModalButton.addEventListener('click', () => {
     modal.classList.remove('hidden');
   });
@@ -36,23 +25,23 @@ openModalButton.addEventListener('click', () => {
 
 
 
-    const navLinks = navBar.querySelectorAll('a');
-    let screenWidth = window.innerWidth;
+const navLinks = navBar.querySelectorAll('a');
+let screenWidth = window.innerWidth;
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            if (screenWidth <= 768) {
-                event.preventDefault();
-                const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
+navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        if (screenWidth <= 768) {
+            event.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
 
-                navBar.classList.add('hidden');
-                menuBtn.classList.toggle('fa-xmark');
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
+            navBar.classList.add('hidden');
+            menuBtn.classList.toggle('fa-xmark');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
     });
+});
 
-    window.addEventListener('resize', ()=>{
-        screenWidth = window.innerWidth;
-    });
+window.addEventListener('resize', ()=>{
+    screenWidth = window.innerWidth;
+});

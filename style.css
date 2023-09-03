@@ -7,7 +7,7 @@
   }
 
   .myIcon:hover .rotate-image{
-    animation: rotate 2s 1 ease-in-out; 
+    animation: rotate 2s infinite linear; 
   }
 
  /* .rotate-image{
@@ -53,12 +53,35 @@ a:hover:before {
 }
 
 
+
+.projContent{
+  position:absolute;
+  z-index: 10;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+
+.projDivs:hover .projContent{
+  transform: translateY(0);
+}
+
+.projDivs:hover{
+  transform: scale(1.1);
+}
+
+.projDivs{
+  transition: 0.3s ease;
+}
+
+
 .footer i{
   margin: 10px;
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
   color: #000000;
+  transition: 0.5s ease;
 }
 .footer .fa-instagram:hover{
   color: white;
