@@ -34,7 +34,7 @@
   }
   
 
-  a:before {
+  .nav-d:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -47,7 +47,7 @@
     transition: all 0.4s ease-in-out 0s;
 }
 
-a:hover:before {
+.nav-d:hover:before {
     visibility: visible;
     transform: scaleX(1);
 }
