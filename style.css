@@ -32,24 +32,23 @@
       transform: rotateY(360deg);
     }
   }
-  
 
-  .nav-d:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    margin: 0;
-    background-color: purple;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.4s ease-in-out 0s;
+.nav-d::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: purple;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
 }
 
-.nav-d:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
+.nav-d:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 
@@ -104,3 +103,22 @@
   color: white;
   background: black;
 }
+
+
+    /* .nav-d:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      margin: 0;
+      background-color: purple;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .nav-d:hover:before {
+      visibility: visible;
+      transform: scaleX(1);
+  } */
