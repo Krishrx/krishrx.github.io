@@ -44,26 +44,28 @@
         
       </style>
 </head>
-<body class="font-poppins bg-purple-50">
+<body class="font-poppins bg-purple-50 w-full min-h-screen max-h-full">
 
     <header class="flex md:items-center  justify-between w-full bg-purple-50">
         <!-- logo & title -->
-        <div class="myIcon flex items-center md:pl-20  m-3">
+        
+        <div class="myIcon flex items-center justify-center md:pl-20  px-4 py-4">
             <div class="rotate-image w-10 h-10">
-                <img src="./images/portfolio_icon.jpg" class="w-10 h-10 rounded-full" alt="Logoicon">
+                <a href="https://krishrx.github.io/"><img src="./images/portfolio_icon.jpg" class="w-10 h-10 rounded-full" alt="Logoicon"></a>
             </div>
-            <h1 class="text-2xl font-bold ml-2">Krish.</h1>
+           <a href="https://krishrx.github.io/"><h1 class="text-2xl font-bold ml-2">Krish.</h1></a> 
         </div>
+
         <!-- NavBar -->
         <nav>
-            <ul id="nav-bar" class=" hidden absolute top-0 left-0 space-y-8 py-6 pt-12 md:static  md:flex md:space-y-0 md:space-x-8  md:py-0 md:pt-0 md:mr-4 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-50 md:bg-transparent">
+            <ul id="nav-bar" class="-translate-y-full absolute top-0 left-0 space-y-8 py-6 pt-16 transition-transform duration-500 ease-in-out md:static  md:flex md:space-y-0 md:space-x-8  md:py-0 md:pt-0 md:mr-4 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-50 md:bg-transparent md:translate-y-0">
                 <li><a class="relative nav-d" href="#home">Home</a></li>  
                 <li><a class="relative nav-d" href="#about">About me</a></li>
                 <li><a class="relative nav-d" href="#skills">Skills</a></li>
                 <li><a class="relative nav-d" href="#projects">Projects</a></li>
                 <li><a class="relative nav-d" href="#contact">Say hello</a></li>
             </ul>
-            <i id="menu-btn" class="relative fa-solid fa-bars mt-2 text-2xl mx-3 z-10 md:hidden"></i>
+            <i id="menu-btn" class="relative fa-solid fa-bars cursor-pointer text-2xl px-4 py-4 z-10  md:hidden rounded-full"></i>
         </nav>
 
     </header>
@@ -206,7 +208,7 @@
         <!-- Projects text -->
         <div class="flex flex-col items-center">
           <h1 class="text-2xl font-bold py-4 uppercase">Projects</h1>
-          <p class="p-2 text-gray-600">Here are Few Projects I've worked on.</p>
+          <p class="p-2 text-gray-600">Here are Few Projects I've Done.</p>
         </div>
 
         <!-- Projects flex div -->
@@ -305,27 +307,27 @@
           <div class="bg-white p-8 rounded shadow-lg w-11/12 md:w-6/12 relative">
 
             <!-- close icon -->
-            <i id="closeModalButton"  class="fa-solid fa-xmark fa-lg cursor-pointer absolute top-4 right-3 "></i>
+            <i id="closeModalButton"  class="fa-solid fa-xmark fa-lg cursor-pointer absolute top-4 right-3 p-4 hover:bg-gray-100 rounded-full"></i>
 
             <!-- Contact heading -->
-            <h2 class="text-xl text-center font-semibold mb-4">Get in touch with Me!</h2>
+            <h2 class="text-xl text-center font-semibold mb-4">Let's Talk!</h2>
 
             <!-- Contact form -->
             <form id="contactForm">
 
               <div class="mb-4">
                 <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-                <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded" required>
+                <input type="text" id="name" name="name" class="w-full px-3 py-2 border-2 border-purple-300  focus:outline-purple-500  rounded" required>
               </div>
               
               <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded" required>
+                <input type="email" id="email" name="email" class="w-full px-3 py-2 border-2 border-purple-300  focus:outline-purple-500   rounded" required>
               </div>
 
               <div class="mb-4">
               <label for="message" class="block mb-2 font-bold text-gray-700">Your message</label>
-              <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" placeholder="Leave a message..." required></textarea>
+              <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-purple-300  focus:outline-purple-500  " placeholder="Leave a message..." required></textarea>
               </div>
 
       
