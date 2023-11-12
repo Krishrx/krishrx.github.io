@@ -42,8 +42,8 @@ navLinks.forEach(link => {
             const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
 
-            navBar.classList.remove('-translate-y-full');
-            navBar.classList.add('translate-y-0')
+            navBar.classList.remove('translate-y-0');
+            navBar.classList.add('-translate-y-full')
             menuBtn.classList.toggle('fa-xmark');
             targetSection.scrollIntoView({ behavior: 'smooth' });
         }
