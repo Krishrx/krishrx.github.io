@@ -1,9 +1,16 @@
 const menuBtn = document.getElementById('menu-btn');
 const navBar = document.getElementById('nav-bar');
 
-menuBtn.addEventListener('click',()=>{
-    navBar.classList.toggle('hidden');
+menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('fa-xmark');
+    if (menuBtn.classList.contains('fa-xmark')) {
+        navBar.classList.remove('-translate-y-full');
+        navBar.classList.add('translate-y-0')
+    }
+    else {
+        navBar.classList.remove('translate-y-0');
+        navBar.classList.add('-translate-y-full')
+    }
 })
 
 openModalButton.addEventListener('click', () => {
