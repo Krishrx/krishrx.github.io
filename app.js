@@ -13,9 +13,13 @@ menuBtn.addEventListener('click', () => {
     }
 })
 
-openModalButton.addEventListener('click', () => {
-    modal.classList.remove('hidden');
-  });
+const openModalButtons = document.querySelectorAll('.openModalButton')
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+    });
+});
 
   closeModalButton.addEventListener('click', () => {
       modal.classList.add('hidden');
