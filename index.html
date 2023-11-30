@@ -58,14 +58,18 @@
 
         <!-- NavBar -->
         <nav>
-            <ul id="nav-bar" class="-translate-y-full absolute top-0 left-0 space-y-8 py-6 pt-16 transition-transform duration-500 ease-in-out md:static  md:flex md:space-y-0 md:space-x-8  md:py-0 md:pt-0 md:mr-4 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-100 md:bg-transparent md:translate-y-0 z-10 md:z-0">
+            <ul id="nav-bar" class="-translate-y-full absolute top-0 left-0 space-y-8 py-6 pt-16 transition-transform duration-500 ease-in-out md:static  md:flex md:space-y-0 md:space-x-8  md:py-0 md:pt-0 md:mr-4 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-100 md:bg-transparent md:translate-y-0">
                 <li><a class="relative nav-d" href="#home">Home</a></li>  
                 <li><a class="relative nav-d" href="#about">About me</a></li>
                 <li><a class="relative nav-d" href="#skills">Skills</a></li>
                 <li><a class="relative nav-d" href="#projects">Projects</a></li>
                 <li><a class="relative nav-d" href="#contact">Say hello</a></li>
             </ul>
-            <i id="menu-btn" class="relative fa-solid fa-bars cursor-pointer text-2xl  z-10  md:hidden rounded-full"></i>
+            <div id="menuToggleIcon" class="relative cursor-pointer text-xl  z-10  md:hidden rounded-full menu-toggle-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </nav>
 
     </header>
