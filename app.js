@@ -1,9 +1,9 @@
-const menuBtn = document.getElementById('menu-btn');
+const menuBtn = document.getElementById('menuToggleIcon');
 const navBar = document.getElementById('nav-bar');
 
 menuBtn.addEventListener('click', () => {
-    menuBtn.classList.toggle('fa-xmark');
-    if (menuBtn.classList.contains('fa-xmark')) {
+    menuBtn.classList.toggle('change');
+    if (menuBtn.classList.contains('change')) {
         navBar.classList.remove('-translate-y-full');
         navBar.classList.add('translate-y-0')
     }
@@ -48,7 +48,7 @@ navLinks.forEach(link => {
 
             navBar.classList.remove('translate-y-0');
             navBar.classList.add('-translate-y-full')
-            menuBtn.classList.toggle('fa-xmark');
+            menuBtn.classList.toggle('change');
             targetSection.scrollIntoView({ behavior: 'smooth' });
         }
     });

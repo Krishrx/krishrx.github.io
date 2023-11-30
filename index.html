@@ -58,14 +58,18 @@
 
         <!-- NavBar -->
         <nav>
-            <ul id="nav-bar" class="-translate-y-full absolute top-0 left-0 space-y-8 py-6 pt-16 transition-transform duration-500 ease-in-out md:static  md:flex md:space-y-0 md:space-x-8  md:py-0 md:pt-0 md:mr-4 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-100 md:bg-transparent md:translate-y-0 z-10 md:z-0">
+            <ul id="nav-bar" class="-translate-y-full absolute top-0 left-0 space-y-8 py-6 pt-16 transition-transform duration-500 ease-in-out md:static  md:flex md:space-y-0 md:space-x-8  md:py-0 md:pt-0 md:mr-4 md:rounded-none text-sm font-bold uppercase text-gray-600  w-full text-center rounded-b-xl bg-purple-100 md:bg-transparent md:translate-y-0">
                 <li><a class="relative nav-d" href="#home">Home</a></li>  
                 <li><a class="relative nav-d" href="#about">About me</a></li>
                 <li><a class="relative nav-d" href="#skills">Skills</a></li>
                 <li><a class="relative nav-d" href="#projects">Projects</a></li>
                 <li><a class="relative nav-d" href="#contact">Say hello</a></li>
             </ul>
-            <i id="menu-btn" class="relative fa-solid fa-bars cursor-pointer text-2xl  z-10  md:hidden rounded-full"></i>
+            <div id="menuToggleIcon" class="relative cursor-pointer text-xl  z-10  md:hidden rounded-full menu-toggle-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </nav>
 
     </header>
@@ -82,7 +86,7 @@
           <h1 class="text-xl md:text-2xl">A <span class="text-purple-800" id="changing-text"></span></h1>
           <p class="font-medium text-md md:text-lg py-2">A Developer passionate about both frontend and backend development, aiming to create seamless and successful digital products.</p>
           <div class="py-2">
-            <button class="openModalButton shadow-lg shadow-purple-200/50 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+            <button class="openModalButton shadow-lg shadow-purple-200/50 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-purple-500 group-hover:from-purple-600 group-hover:to-purple-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800">
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Hire Me!
             </span>
@@ -102,7 +106,7 @@
           <h1 class="text-2xl font-bold py-4 uppercase">About Me</h1>
         </div>
         <div class="w-11/12 text-center text-gray-600 p-4 px-8 md:w-1/2 md:px-0 md:text-lg shadow-xl shadow-purple-100 bg-purple-50 rounded-xl border-purple-200 border-2">
-          <p class="p-4 md:p-8">I'm an electronics and communication engineering grad who's taken a detour into the world of web development. What began as a curiosity about web development has evolved into a fervent journey of learning and growth. While my foundation rests in circuits and signals, I find my affinity in sync with coding and crafting web experiences. Besides my passion for tech, I love to watch movies.</p>
+          <p class="py-4 px-2 md:p-8">I'm an electronics and communication engineering grad who's taken a detour into the world of web development. What began as a curiosity about web development has evolved into a fervent journey of learning and growth. While my foundation rests in circuits and signals, I find my affinity in sync with coding and crafting web experiences. Besides my passion for tech, I love to watch movies.</p>
         </div>
       </section>
 
@@ -116,7 +120,7 @@
         </div>
 
         <!-- skills flex div -->
-        <div class="p-4 px-8 py-12 w-11/12 h-full shadow-xl shadow-purple-100 flex flex-col md:flex-row md:text-lg bg-purple-50 rounded-xl border-purple-200 border-2">
+        <div class="px-4 py-8 w-11/12 h-full shadow-xl shadow-purple-100 flex flex-col md:flex-row md:text-lg bg-purple-50 rounded-xl border-purple-200 border-2">
 
           <!-- Languages -->
           <div class="basis-1/3 p-4">
@@ -225,66 +229,96 @@
           <div class="projDivs rounded-xl relative overflow-hidden cursor-pointer">
 
             <div class="w-full h-full relative rounded-xl">
-              <img src="./images/tick_task_snip.png" class="w-96 h-60 rounded-xl" alt="tick task">
+              <img src="./images/tick_task_snip.png" class="w-96 h-64 rounded-xl" alt="tick task">
               <div class="absolute w-full h-full bg-slate-500 opacity-70 top-0 left-0 rounded-xl"></div>
               <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full 
               text-xl font-medium text-white">Tick Task</div>
             </div>
 
-            <div class="projContent text-center text-white px-2 py-2 pt-8 bg-purple-200 w-full h-full rounded-xl">
-              <p class="text-gray-600">Tick Task is a web application to keep track of tasks.</p>
+            <div class="projContent p-4 pt-8 bg-purple-200 w-full h-full rounded-xl text-gray-600 flex flex-col justify-between">
+              <div class="flex flex-col space-y-2">
+                <p class="text-sm">Tick Task is a web application to keep track of tasks.</p>
               
-              <div class="p-2 mt-6 flex justify-center">
-                <button onclick='window.location.href = "https://tick-task-krishrx.vercel.app/"' class="shadow-lg relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                <div class="flex items-center flex-wrap gap-2">
+                  <p class="font-medium text-sm">Tech Stack :</p>
+                  <div class="rounded-md text-xs p-2 border border-blue-800/60">React</div>
+                  <div class="rounded-md text-xs p-2 border border-yellow-800/60">Tailwind</div>
+                  <div class="rounded-md text-xs p-2 border border-pink-800/60">Redux</div>
+                  <div class="rounded-md text-xs p-2 border border-cyan-800/60">Vite</div>
+                  <div class="rounded-md text-xs p-2 border border-green-800/60">Material Tailwind</div>
+                  <div class="rounded-md text-xs p-2 border border-orange-800/60">Shadcn</div>
+                </div>
+              </div>
+              
+              <div class="pt-2 flex justify-center">
+                <button onclick='window.location.href = "https://tick-task-krishrx.vercel.app/"' class="shadow-lg relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 hover:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
                   <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                    View Website
+                    Visit Site
                   </span>
                 </button>
               </div>
 
             </div>
 
-          </div>
-
-            <div class="projDivs rounded-xl relative overflow-hidden cursor-pointer">
-
-            <div class="w-full h-full relative rounded-xl">
-              <img src="./images/countries_app_snip.png" class="w-96 h-60 rounded-xl" alt="word magic">
-              <div class="absolute w-full h-full bg-slate-500 opacity-70 top-0 left-0 rounded-xl"></div>
-              <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full 
-              text-xl font-medium text-white">Countries App</div>
-            </div>
-
-            <div class="projContent text-center text-white px-2 py-2 pt-8 bg-purple-200 w-full h-full rounded-xl">
-              <p class="text-gray-600">A Countries app to preview and get detail of each country.</p>
-              
-              <div class="p-2 mt-6 flex justify-center">
-                <button onclick='window.location.href = "https://countries-app-ecru.vercel.app/"' class="shadow-lg relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-                  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                    View Website
-                  </span>
-                </button>
-              </div>
-
-            </div>
           </div>
 
           <div class="projDivs rounded-xl relative overflow-hidden cursor-pointer">
 
             <div class="w-full h-full relative rounded-xl">
-              <img src="./images/wordmagic_snip.png" class="w-96 h-60 rounded-xl" alt="word magic">
+              <img src="./images/countries_app_snip.png" class="w-96 h-64 rounded-xl" alt="tick task">
+              <div class="absolute w-full h-full bg-slate-500 opacity-70 top-0 left-0 rounded-xl"></div>
+              <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full 
+              text-xl font-medium text-white">Countries App</div>
+            </div>
+
+            <div class="projContent p-4 pt-8 bg-purple-200 w-full h-full rounded-xl text-gray-600 flex flex-col justify-between">
+              <div class="flex flex-col space-y-2">
+                <p class="text-sm">A Countries app to preview and get detail of each country.</p>
+              
+              <div class="flex items-center flex-wrap gap-2">
+                <p class="font-medium text-sm">Tech Stack :</p>
+                <div class="rounded-md text-xs p-2 border border-blue-800/60">React</div>
+                <div class="rounded-md text-xs p-2 border border-yellow-800/60">Tailwind</div>
+                <div class="rounded-md text-xs p-2 border border-cyan-800/60">Vite</div>
+              </div>
+              </div>
+              
+              <div class="pt-2 flex justify-center">
+                <button onclick='window.location.href = "https://countries-app-ecru.vercel.app/"' class="shadow-lg relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 hover:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Visit Site
+                  </span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="projDivs rounded-xl relative overflow-hidden cursor-pointer">
+
+            <div class="w-full h-full relative rounded-xl">
+              <img src="./images/wordmagic_snip.png" class="w-96 h-64 rounded-xl" alt="tick task">
               <div class="absolute w-full h-full bg-slate-500 opacity-70 top-0 left-0 rounded-xl"></div>
               <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full 
               text-xl font-medium text-white">Word Magic</div>
             </div>
-
-            <div class="projContent text-center text-white px-2 py-2 pt-8 bg-purple-200 w-full h-full rounded-xl">
-              <p class="text-gray-600">Word Magic is a web-based tool that provides various text manipulation.</p>
+           <div class="projContent p-4 pt-8 bg-purple-200 w-full h-full rounded-xl text-gray-600 flex flex-col justify-between">
+              <div class="flex flex-col space-y-2">
+                <p class="text-sm">Word Magic is a web-based tool that provides various text manipulation.</p>
               
-              <div class="p-2 mt-6 flex justify-center">
-                <button onclick='window.location.href = "https://wordmagic.onrender.com/index.html"' class="shadow-lg relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                <div class="flex items-center flex-wrap gap-2">
+                  <p class="font-medium text-sm">Tech Stack :</p>
+                  <div class="rounded-md text-xs p-2 border border-blue-800/60">HTML</div>
+                  <div class="rounded-md text-xs p-2 border border-yellow-800/60">CSS</div>
+                  <div class="rounded-md text-xs p-2 border border-cyan-800/60">JavaScript</div>
+                </div>
+              </div>
+              
+              <div class="pt-2 flex justify-center">
+                <button onclick='window.location.href = "https://wordmagic.onrender.com/index.html"' class="shadow-lg relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 hover:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
                   <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                    View Website
+                    Visit Site
                   </span>
                 </button>
               </div>
@@ -302,7 +336,7 @@
 
         <!-- contact button -->
         <div class="text-center py-4">
-          <button  class="openModalButton shadow-lg shadow-purple-200/50 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+          <button  class="openModalButton shadow-lg shadow-purple-200/50 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-purple-500 group-hover:from-purple-600 group-hover:to-purple-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800">
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Say Hello!
             </span>
@@ -340,7 +374,7 @@
 
       
               <div class="flex justify-center">
-                <button id="contact-submit" type="submit" class="shadow-lg shadow-purple-200/50 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <button id="contact-submit" type="submit" class="shadow-lg shadow-purple-200/50 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-purple-500 group-hover:from-purple-600 group-hover:to-purple-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800">
                   <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     Send
                 </span>
