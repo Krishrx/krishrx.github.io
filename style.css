@@ -41,9 +41,9 @@
     .bar1,
     .bar2,
     .bar3 {
-      width: 30px;
+      width: 25px;
       height: 3px;
-      background-color: #333;
+      background-color: #3b0764;
       margin: 6px 0;
       transition: 0.4s;
     }
@@ -138,7 +138,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: #d3bee9;
   border-radius: 6px;
-  height: 12px;
+  height: 10px;
   transition: background-color 0.3s;
 }
 
